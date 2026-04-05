@@ -13,5 +13,6 @@ class Draft(BaseModel):
     text: str
 
 class ProcessingResponse(BaseModel):
-    make_avert: bool
+    detectedMcIds: List[int]
+    shouldSplit: bool
     drafts: List[Draft] = []
