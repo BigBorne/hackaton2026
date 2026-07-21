@@ -5,10 +5,10 @@ import json
 from app.prompt import response_prompt
 from app.schemas import AdInput, ProcessingResponse
 
-giga = GigaChat(credentials="MDE5ZDVkYTQtZDk4Mi03NDQ5LTkzYjMtMzEwNmFmZDg4MTBmOjhjNmJlNTc2LTI0YTMtNGY0MC1iMWNiLTk2MzhhYzIzOTg2Zg==", verify_ssl_certs=False)
+giga = GigaChat(credentials="Твой_Токен_от_ГигаЧата", verify_ssl_certs=False)
 app = FastAPI()
 
-# 1. Эндпоинт /analyze - post запрос на swagger ui (http://127.0.0.1:8000/docs)
+# /analyze - post запрос на swagger ui (http://127.0.0.1:8000/docs)
 @app.post('/analyze')
 async def process_add(item: AdInput) -> ProcessingResponse:
     """
